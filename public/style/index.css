@@ -23,6 +23,7 @@ html[data-theme="light"] {
     --post-edit-bg-color: hsl(197, 100%, 52%);
     --post-delete-bg-color: hsl(0, 100%, 50%);
     --footer-bg-color: hsl(210, 100%, 10%);
+    --content-max-width: 800px;
     --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 html, body {
@@ -41,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* prevent small horizontal scrollbar when footer uses 100vw */
 }
 header {
     background-color: var(--header-bg-color);
@@ -87,7 +89,7 @@ main {
 .post-container {
     padding: 2rem;
     width: 90%  ;
-    max-width: 800px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
@@ -172,7 +174,9 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 1.5rem 0;
-    width: 100%;
+    width: 100vw; /* span the full viewport width */
+    position: relative;
+    /* pull it to edges */
     box-sizing: border-box;
     font-family: var(--font-stack);
     font-size: 0.95rem;
@@ -182,8 +186,7 @@ footer {
 }
 
 .footer-inner {
-    width: 90%;
-    max-width: 800px; /* match .post-container max-width for alignment */
+    width: 100%; /* match .post-container max-width for alignment */
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -210,7 +213,7 @@ footer a:hover {
 
 .header-inner {
     width: 90%;
-    max-width: 800px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
