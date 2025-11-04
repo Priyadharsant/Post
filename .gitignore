@@ -1,0 +1,38 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+pids
+*.pid
+
+# Build / output
+dist/
+build/
+coverage/
+
+# Static uploads
+public/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+
+# Misc
+*.tgz

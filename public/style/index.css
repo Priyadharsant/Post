@@ -1,0 +1,176 @@
+
+html[data-theme="light"] {
+    --body-bg-color: hsl(0, 0%, 98%);
+    --text-color: hsl(0, 0%, 10%);
+    --primary-color: hsl(210, 100%, 20%);
+    --secondary-color: hsl(210, 100%, 40%);
+    --theme-toggle-bg-color: hsl(210, 100%, 90%);
+    --header-bg-color: hsl(210, 100%, 50%);
+    --post-container-bg-color: hsl(210, 100%, 95%);
+    --post-edit-bg-color: hsl(197, 100%, 52%);
+    --post-delete-bg-color: hsl(0, 100%, 50%);
+    --footer-bg-color: hsl(210, 100%, 90%);
+    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+    --body-bg-color: hsl(210, 100%, 5%);
+    --text-color: hsl(210, 100%, 90%);
+    --primary-color: hsl(210, 100%, 95%);
+    --secondary-color: hsl(210, 100%, 80%);
+    --theme-toggle-bg-color: hsl(210, 100%, 15%);
+    --header-bg-color: hsl(210, 100%, 50%);
+    --post-container-bg-color: hsl(210, 100%, 10%);
+    --post-edit-bg-color: hsl(197, 100%, 52%);
+    --post-delete-bg-color: hsl(0, 100%, 50%);
+    --footer-bg-color: hsl(210, 100%, 10%);
+    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+            
+}
+header {
+    background-color: var(--header-bg-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100% ;
+    font-family: var(--font-stack);
+    margin-bottom: 2rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header button {
+    background-color: var(--theme-toggle-bg-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.Create{
+    padding : 0.5rem 1rem;
+    background-color: var(--post-edit-bg-color);
+    color: var(--primary-color);
+    border: none;
+    margin: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.post-container {
+    padding: 2rem;
+    width: 90%  ;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: var(--post-container-bg-color);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.post-container .title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.post-container .date,.post-container .author {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}   
+
+.post-container .content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.post-container .footer {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+.post-container .footer button {
+    color: var(--primary-color);
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.post-container .footer .Edit {
+    background-color: var(--post-edit-bg-color);
+    margin-right: 1rem;
+}
+.post-container .footer .Delete {
+    background-color: var(--post-delete-bg-color);
+}   
+
+.post-container form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.post-container form input,
+.post-container form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}   
+.post-container form button {
+    background-color: var(--post-edit-bg-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+    font-family: var(--font-stack);
+    z-index: 1000;
+    margin-bottom: 0;
+}
+
+*{                  
+    transition: all 0.3s ease-in-out;
+}

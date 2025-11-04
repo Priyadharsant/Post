@@ -1,0 +1,35 @@
+<%- include('./header') %>
+<main>
+  <button class="Create" onclick="window.location.href='/create-post'">
+    Create New Post
+  </button>
+  <% if(posts.length > 0) { %> <% posts.forEach(post => { %>
+  <div class="post-container">
+    <span class="title"><%= post.title %></span>
+    <span class="date"><%= post.date %></span>
+    <div class="content">
+      <p><%= post.content %></p>
+    </div>
+    <span class="author"><%= post.author %></span>
+    <span class="footer">
+      <button
+        class="Edit"
+        onclick="window.location.href='/edit/<%= post.id %>'"
+      >
+        Edit
+      </button>
+      <button
+        class="Delete"
+        onclick="window.location.href='/delete/<%= post.id %>'"
+      >
+        Delete
+      </button>
+    </span>
+  </div>
+  <% }) %> <% } else { %>
+  <div class="post-container">
+    <span class="content">No Posts Available</span>
+  </div>
+  <% } %>
+</main>
+<%- include("footer") %>
