@@ -213,7 +213,6 @@ footer a:hover {
 
 .header-inner {
     width: 90%;
-    max-width: var(--content-max-width);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
